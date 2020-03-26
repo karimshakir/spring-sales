@@ -16,14 +16,7 @@ public class ProductService {
     public List<Product> listAll() {
         return repo.findAll();
     }
-
-    public void save(Product product) {
-        repo.save(product);
-    }
-
-    public Product get(Integer id) {
-        return repo.findById(id).get();
-    }
+    
 
     public void delete(Integer id) {
         repo.deleteById(id);

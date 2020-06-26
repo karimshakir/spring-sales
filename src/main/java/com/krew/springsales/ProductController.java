@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.NoSuchElementException;
 
@@ -16,7 +15,6 @@ public class ProductController {
     private ProductService service;
 
     // RESTful API methods for Retrieval operations
-
     @GetMapping("/products")
     public List<Product> list() {
         return service.listAll();
@@ -52,7 +50,6 @@ public class ProductController {
     }
 
     // RESTful API method for Delete operation
-
     @DeleteMapping("/products/{id}")
     public void delete(@PathVariable Integer id) {
         service.delete(id);
